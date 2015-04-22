@@ -146,10 +146,6 @@ nav a:hover {
 
 nav .main-nav {
   height: 0px;
-  -webkit-transition: height 400ms ease-out;
-  -moz-transition: height 400ms ease-out;
-  -o-transition: height 400ms ease-out;
-  transition: height 400ms ease-out;
   overflow: hidden;
   position: absolute;
   width: 100%;
@@ -159,6 +155,10 @@ nav .main-nav {
 nav.open .main-nav {
   height: 120px;
   border-bottom: 1px solid #eee;
+  -webkit-transition: height 300ms ease-out;
+  -moz-transition: height 300ms ease-out;
+  -o-transition: height 300ms ease-out;
+  transition: height 300ms ease-out;
 }
 
 nav.open .page-title {
@@ -244,6 +244,7 @@ p{
 .vert-centered{
     position: absolute;
     top:50%;
+    -webkit-transform:translateY(-50%);
     transform:translateY(-50%);
 }
 
@@ -280,6 +281,7 @@ p{
     width:130px;
     height:50px;
     background-size:cover;
+    -webkit-transform:translate(-50%,-50%);
     transform:translate(-50%,-50%);
 }
 
@@ -354,6 +356,7 @@ p{
         height: 100%;
         width: auto;
         left: 50%;
+        -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         opacity:0;
         -webkit-transition: opacity 700ms linear;
@@ -403,7 +406,8 @@ p{
     .thumbs-nav{
         width: 36px;
         top: 50%;
-        left: 20px;
+        left: 50px;
+        -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         position: absolute;
     }
