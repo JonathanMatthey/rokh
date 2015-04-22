@@ -95,11 +95,6 @@ body {
   font-size: 14px;
 }
 
-html,
-body,
-.main-container {
-  height: 100%;
-}
 
 /* ===================
     ALL: Orange Theme
@@ -138,6 +133,11 @@ nav a:hover {
   -moz-transition: opacity 100ms linear;
   -o-transition: opacity 100ms linear;
   transition: opacity 100ms linear;
+  display: none;
+}
+
+.index-page .page-title{
+  display: block;
 }
 
 .navbar-header {
@@ -241,15 +241,6 @@ p{
     margin:20px 0;
 }
 
-.vert-centered{
-    position: absolute;
-    top:50%;
-    -webkit-transform:translateY(-50%);
-    transform:translateY(-50%);
-}
-
-
-
 .contact-us address{
     margin-bottom:20px;
     font-style:normal;
@@ -276,10 +267,10 @@ p{
     position: absolute;
     top: 50%;
     left: 50%;
-    background-image:url(../img/rokhlogo@2x_white.png);
+    background-image:url(../img/rokhlogo_mobile@2x.png);
     z-index:99999;
-    width:130px;
-    height:50px;
+    width:65px;
+    height:25px;
     background-size:cover;
     -webkit-transform:translate(-50%,-50%);
     transform:translate(-50%,-50%);
@@ -307,14 +298,24 @@ p{
    ==================== */
 
 
-/* ============
-    WIDE: Menu
-   ============ */
+  html,
+  body,
+  .main-container {
+    height: 100%;
+  }
 
+  .vert-centered{
+      position: absolute;
+      top:50%;
+      -webkit-transform:translateY(-50%);
+      transform:translateY(-50%);
+  }
 
-/* ============
-    WIDE: Main
-   ============ */
+  .logo-white{
+    background-image:url(../img/rokhlogo@2x_white.png);
+    width:130px;
+    height:50px;
+  }
 
 }
 
@@ -325,134 +326,137 @@ p{
    =============== */
 
    .navbar{
-    display: none;
+     display: none;
    }
 
     .main {
-        padding: 34px 48px;
+      padding: 34px 48px;
     }
 
     .wrapper {
-        width: 100%; /* 1140px - 10% for margins */
-        height: 100%;
-        margin: 0 auto;
-        font-size: 0;
+      width: 100%; /* 1140px - 10% for margins */
+      height: 100%;
+      margin: 0 auto;
+      font-size: 0;
     }
 
     .right-col,
     .left-col{
-        display: inline-block;
-        position: relative;
+      display: inline-block;
+      position: relative;
     }
 
     .center-col{
-        width: 33.333333%;
-        overflow: hidden;
-        position: relative;
+      width: 33.333333%;
+      overflow: hidden;
+      position: relative;
     }
 
     img.main-img{
-        position: absolute;
-        height: 100%;
-        width: auto;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%);
-        opacity:0;
-        -webkit-transition: opacity 700ms linear;
-        -moz-transition: opacity 700ms linear;
-        -o-transition: opacity 700ms linear;
-        transition: opacity 700ms linear;
+      position: absolute;
+      height: 100%;
+      width: auto;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      opacity:0;
+      -webkit-transition: opacity 700ms linear;
+      -moz-transition: opacity 700ms linear;
+      -o-transition: opacity 700ms linear;
+      transition: opacity 700ms linear;
     }
 
     img.main-img.show{
         opacity: 1;
     }
 
-
     .col-3{
 
     }
 
     .site-title{
-        position: absolute;
-        top: 0;
-        left: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image:url(../img/rokhlogo@2x-.png);
+      width:69px;
+      height:27px;
+      background-size:contain;
     }
 
     .main-desktop-nav{
-        position: absolute;
-        bottom: 70px;
-        left: 0;
-        list-style:none;
-        padding:0;
-        margin:0;
+      position: absolute;
+      bottom: 70px;
+      left: 0;
+      list-style:none;
+      padding:0;
+      margin:0;
     }
 
     .left-col footer{
-        position: absolute;
-        bottom: 0px;
-        left: 0;
+      position: absolute;
+      bottom: 0px;
+      left: 0;
     }
 
     .center-col footer{
-        display: none;
+      display: none;
     }
 
     .main-desktop-nav .sub{
-        margin-left:20px;
+      margin-left:20px;
     }
 
     .thumbs-nav{
-        width: 36px;
-        top: 50%;
-        left: 50px;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        position: absolute;
+      width: 36px;
+      top: 50%;
+      left: 50px;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      position: absolute;
     }
 
     .thumb{
-        width:26px;
-        height:39px;
-        background-size:cover;
-        margin:5px;
-        cursor: pointer;
-        -webkit-transition: opacity 100ms linear;
-        -moz-transition: opacity 100ms linear;
-        -o-transition: opacity 100ms linear;
-        transition: opacity 100ms linear;
+      width:26px;
+      height:39px;
+      background-size:cover;
+      margin:5px;
+      cursor: pointer;
+      -webkit-transition: opacity 100ms linear;
+      -moz-transition: opacity 100ms linear;
+      -o-transition: opacity 100ms linear;
+      transition: opacity 100ms linear;
     }
 
     .thumb:hover{
-        opacity:0.8;
+      opacity:0.8;
     }
 
     .thumbs-arrow-down,
     .thumbs-arrow-up{
-        background:#eee;
-        height:15px;
-        margin: 0 5px;
-        cursor: pointer;
+      background:#eee;
+      height:15px;
+      margin: 0 5px;
+      cursor: pointer;
     }
     .thumbs-arrow-down:hover,
     .thumbs-arrow-up:hover{
-        background:#333;
+      background:#333;
     }
 
     .thumb-slider{
-        position: relative;
-        height:313px;
-        overflow:hidden;
+      position: relative;
+      height:313px;
+      overflow:hidden;
     }
 
     .thumb-slider-inner{
-        top:0;
-        position: absolute;
-        -webkit-transition: top 300ms ease-out;
-        -moz-transition: top 300ms ease-out;
-        -o-transition: top 300ms ease-out;
-        transition: top 300ms ease-out;
+      top:0;
+      position: absolute;
+      -webkit-transition: top 300ms ease-out;
+      -moz-transition: top 300ms ease-out;
+      -o-transition: top 300ms ease-out;
+      transition: top 300ms ease-out;
     }
 
     .thumb:nth-child(1){

@@ -52,22 +52,35 @@ $(document).ready(function(){
   });
 
   // ajax content in
-  $(".nav a").click(function(e){
+  $(".nav a, .site-title").click(function(e){
     e.preventDefault();
     var targetPage = $(e.currentTarget).attr('href');
+    var pageTitle = targetPage.split('.')[0];
     if (window.location.href.indexOf(targetPage) == -1){
       $("nav").removeClass('open');
       $.ajax({
          url: targetPage,
          data: {},
          success: function (data) {
+            $("body").removeClass('index-page about-page contact-page').addClass(pageTitle+"-page");
+
+            if(pageTitle == "index"){
+              setTimeout(function(){
+                $(".thumbs-nav").fadeIn(600);
+              },400);
+            } else {
+              $(".thumbs-nav").fadeOut(300);
+            }
+
             $("#main-content").fadeOut(400,function(){
-              $("#main-content").html($(data).find("#main-content"));
+              $("#main-content").html($(data).find("#main-content").html());
               $("#main-content").fadeIn(600);
+              window.history.pushState(pageTitle, pageTitle, targetPage);
             })
          },
          dataType: 'html'
       });
     }
   });
+
 });
