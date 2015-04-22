@@ -54,7 +54,8 @@ $(document).ready(function(){
   // ajax content in
   $(".nav a, .site-title").click(function(e){
     e.preventDefault();
-    var targetPage = $(e.currentTarget).attr('href');
+    var $link = $(e.currentTarget);
+    var targetPage = $link.attr('href');
     var pageTitle = targetPage.split('.')[0];
     if (window.location.href.indexOf(targetPage) == -1){
       $("nav").removeClass('open');
@@ -62,6 +63,8 @@ $(document).ready(function(){
          url: targetPage,
          data: {},
          success: function (data) {
+            $(".nav .active").removeClass('active');
+            $link.addClass('active');
             $("body").removeClass('index-page about-page contact-page').addClass(pageTitle+"-page");
 
             if(pageTitle == "index"){

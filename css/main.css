@@ -325,6 +325,10 @@ p{
     Maximal Width
    =============== */
 
+    .splash{
+        background-image:url(../img/coverimage.jpg);
+    }
+
    .navbar{
      display: none;
    }
