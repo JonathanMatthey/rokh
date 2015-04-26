@@ -140,6 +140,10 @@ nav a:hover {
   display: block;
 }
 
+.index-page .main-desktop-nav .closed{
+  height:26px;
+}
+
 .navbar-header {
   padding: 20px;
 }
@@ -409,6 +413,16 @@ p{
 
   .main-desktop-nav .sub{
     margin-left:20px;
+    height:26px;
+    overflow: hidden;
+    -webkit-transition: height 400ms ease-out;
+    -moz-transition: height 400ms ease-out;
+    -o-transition: height 400ms ease-out;
+    transition: height 400ms ease-out;
+  }
+
+  .main-desktop-nav .closed{
+    height:0;
   }
 
   .thumbs-nav{
